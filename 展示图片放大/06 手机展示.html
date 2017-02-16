@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{ margin:0; padding:0; list-style:none;}
+body{ background:#060f2e;}
+.main{ width:1000px; height:458px; margin:100px auto;}
+.main li{ width:320px; height:426px; background:url(images/01.jpg); float:left;}
+.main .big{ width:360px; height:458px; background:url(images/01big.jpg); margin-top:-16px;margin-left:-40px;}
+</style>
+</head>
+
+<body>
+<div class="main">
+	<ul>
+		<li id="li01"></li>
+		<li id="li02" style="background:url(images/02.jpg);"></li>
+		<li id="li03" style="background:url(images/03.jpg);"></li>
+	</ul>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+var li01=document.getElementById('li01');
+var li02=document.getElementById('li02');
+var li03=document.getElementById('li03');
+li01.onmouseover=function(){
+	li01.className='big';
+}
+li01.onmouseout=function(){
+	li01.className='';
+}
+li02.onmouseover=function(){
+	li02.className='big';
+	li02.style.background='url(images/02big.jpg)'
+}
+li02.onmouseout=function(){
+	li02.className='';
+	li02.style.background='url(images/02.jpg)'
+}
+li03.onmouseover=function(){
+	li03.className='big';
+	li03.style.background='url(images/03big.jpg)'
+}
+li03.onmouseout=function(){
+	li03.className='';
+	li03.style.background='url(images/03.jpg)'
+}
+</script>
