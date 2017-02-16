@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片移动效果</title>
+<style type="text/css">
+.main{ width:640px; height:361px; margin:100px auto; background:#000; }
+.main div{ width:160px; height:361px; float:left; overflow:hidden;}
+</style>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+$(function(){ 
+	$('.main').find('.pic').mouseover(function(e) {
+        $('.pic').stop().fadeTo(500,0.6)
+		$(this).stop().fadeTo(500,1)
+		$(this).children().stop().animate({marginLeft:-13},500)
+    });
+	$('.main').find('.pic').mouseout(function(e) {
+        $('.pic').stop().fadeTo(500,1)
+		$(this).children().stop().animate({marginLeft:0},500)
+    });
+})
+</script>
+</head>
+<body>
+<div class="main">
+	<div class="two">
+    	<a href="#" class="pic"><img src="images/1.jpg" width="173" height="181" /></a>
+    	<a href="#" class="pic"><img src="images/2.jpg" width="173" height="181" /></a>
+    </div>
+    <div class="one"><a href="#" class="pic"><img src="images/3.jpg" width="173" height="361" /></a></div>
+    <div class="two">
+    	<a href="#" class="pic"><img src="images/4.jpg" width="173" height="181" /></a>
+    	<a href="#" class="pic"><img src="images/5.jpg" width="173" height="181" /></a>
+    </div>
+    <div class="one"><a href="#" class="pic"><img src="images/6.jpg" width="173" height="361" /></a></div>
+</div>
+</body>
+</html>
